@@ -59,14 +59,14 @@ const Footer: React.FC = () => {
                 <img 
                   src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" 
                   alt="Download on the App Store"
-                  className="w-full"
+                  className="w-full h-12"
                 />
               </a>
               <a href="#" className="transition-transform hover:scale-105 w-36">
                 <img 
                   src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
                   alt="Get it on Google Play"
-                  className="w-full"
+                  className="w-full h-12 object-contain"
                 />
               </a>
             </div>

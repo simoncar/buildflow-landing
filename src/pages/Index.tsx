@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -97,7 +96,7 @@ const Index: React.FC = () => {
                 <img 
                   src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
                   alt="Get it on Google Play"
-                  className="h-12"
+                  className="h-12 object-contain"
                 />
               </a>
             </div>
@@ -290,7 +289,7 @@ const Index: React.FC = () => {
                 <img 
                   src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
                   alt="Get it on Google Play"
-                  className="h-12"
+                  className="h-12 object-contain"
                 />
               </a>
             </div>
