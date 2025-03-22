@@ -61,7 +61,7 @@ const Index: React.FC = () => {
             
             <div className="flex justify-center space-x-4">
               <a href="#" className="transition-transform hover:scale-105">
-                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" className="h-12" />
+                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" className="h-12 object-scale-down" />
               </a>
               <a href="#" className="transition-transform hover:scale-105">
                 <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-12 object-contain" />
@@ -195,10 +195,10 @@ const Index: React.FC = () => {
             
             <div className="flex justify-center space-x-4 mt-6">
               <a href="#" className="transition-transform hover:scale-105">
-                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" className="h-12" />
+                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" className="h-12 object-scale-down" />
               </a>
               <a href="#" className="transition-transform hover:scale-105">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-12 object-cover" />
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-12 object-contain" />
               </a>
             </div>
           </div>

@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const Footer: React.FC = () => {
-  return (
-    <footer className="bg-black/30 border-t border-white/5 py-12">
+  return <footer className="bg-black/30 border-t border-white/5 py-12">
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="space-y-4">
@@ -56,18 +53,10 @@ const Footer: React.FC = () => {
             <h4 className="text-sm font-semibold uppercase text-white/80 mb-4">Download</h4>
             <div className="flex flex-col space-y-3">
               <a href="#" className="transition-transform hover:scale-105 w-36">
-                <img 
-                  src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" 
-                  alt="Download on the App Store"
-                  className="w-full h-12"
-                />
+                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" className="w-full h-12 object-scale-down" />
               </a>
               <a href="#" className="transition-transform hover:scale-105 w-36">
-                <img 
-                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
-                  alt="Get it on Google Play"
-                  className="w-full h-12 object-contain"
-                />
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="w-full h-12 object-contain" />
               </a>
             </div>
           </div>
@@ -99,8 +88,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
