@@ -48,12 +48,14 @@ const Navbar: React.FC = () => {
             >
               Sign In
             </a>
-            <Link 
-              to="/register" 
+            <a 
+              href="https://b.otbapps.com/signUp" 
               className="text-sm font-medium px-4 py-2 rounded-full bg-primary hover:bg-primary/90 text-white transition-all"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Create Account
-            </Link>
+            </a>
           </div>
         </nav>
         
@@ -99,12 +101,14 @@ const Navbar: React.FC = () => {
               >
                 Sign In
               </a>
-              <Link 
-                to="/register" 
+              <a
+                href="https://b.otbapps.com/signUp"
                 className="text-sm font-medium px-4 py-3 rounded-full bg-primary hover:bg-primary/90 text-center text-white transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Create Account
-              </Link>
+              </a>
             </div>
           </div>
         </div>

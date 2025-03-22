@@ -52,9 +52,14 @@ const Index: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-              <Link to="/register" className="px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-white font-medium transition-all transform hover:scale-105 shadow-lg">
+              <a 
+                href="https://b.otbapps.com/signUp" 
+                className="px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-white font-medium transition-all transform hover:scale-105 shadow-lg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Get Started
-              </Link>
+              </a>
               <a href="#features" className="px-8 py-3 rounded-full bg-white/5 hover:bg-white/10 text-white font-medium border border-white/10 transition-all">
                 Learn More
               </a>
@@ -226,9 +231,14 @@ const Index: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-              <Link to="/register" className="px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-white font-medium transition-all transform hover:scale-105 shadow-lg">
+              <a 
+                href="https://b.otbapps.com/signUp" 
+                className="px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-white font-medium transition-all transform hover:scale-105 shadow-lg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Create Account
-              </Link>
+              </a>
               <a 
                 href="https://b.otbapps.com/signIn" 
                 className="px-8 py-3 rounded-full bg-white/5 hover:bg-white/10 text-white font-medium border border-white/10 transition-all"
