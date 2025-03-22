@@ -40,12 +40,14 @@ const Navbar: React.FC = () => {
             Benefits
           </a>
           <div className="flex items-center space-x-3">
-            <Link 
-              to="/login" 
+            <a 
+              href="https://b.otbapps.com/signIn" 
               className="text-sm font-medium px-4 py-2 rounded-full bg-transparent hover:bg-white/5 text-white transition-all"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Sign In
-            </Link>
+            </a>
             <Link 
               to="/register" 
               className="text-sm font-medium px-4 py-2 rounded-full bg-primary hover:bg-primary/90 text-white transition-all"
@@ -89,12 +91,14 @@ const Navbar: React.FC = () => {
               Benefits
             </a>
             <div className="flex flex-col space-y-3 pt-2">
-              <Link 
-                to="/login" 
+              <a
+                href="https://b.otbapps.com/signIn"
                 className="text-sm font-medium px-4 py-3 rounded-full border border-white/20 text-center hover:bg-white/5 text-white transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Sign In
-              </Link>
+              </a>
               <Link 
                 to="/register" 
                 className="text-sm font-medium px-4 py-3 rounded-full bg-primary hover:bg-primary/90 text-center text-white transition-all"

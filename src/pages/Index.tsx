@@ -229,9 +229,14 @@ const Index: React.FC = () => {
               <Link to="/register" className="px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-white font-medium transition-all transform hover:scale-105 shadow-lg">
                 Create Account
               </Link>
-              <Link to="/login" className="px-8 py-3 rounded-full bg-white/5 hover:bg-white/10 text-white font-medium border border-white/10 transition-all">
+              <a 
+                href="https://b.otbapps.com/signIn" 
+                className="px-8 py-3 rounded-full bg-white/5 hover:bg-white/10 text-white font-medium border border-white/10 transition-all"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Sign In
-              </Link>
+              </a>
             </div>
             
             <div className="flex justify-center space-x-4 mt-6">
