@@ -1,6 +1,6 @@
 {
 	"hosting": {
-		"target": "www",
+		"site": "onebuild",
 		"public": "dist",
 		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
 	}
