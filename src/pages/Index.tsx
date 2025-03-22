@@ -144,7 +144,7 @@ const Index: React.FC = () => {
             <Link to="/register" className="px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-white font-medium transition-all transform hover:scale-105 shadow-lg inline-block">
               Start Your Free Trial
             </Link>
-            <p className="mt-4 text-white/60 text-sm">No credit card required. 14-day free trial.</p>
+            <p className="mt-4 text-white/60 text-sm">No credit card required. Your first project free.</p>
           </div>
         </div>
       </section>
