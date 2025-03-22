@@ -1,64 +1,45 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Calendar, 
-  FileText, 
-  CheckSquare, 
-  Users, 
-  Bell, 
-  Clock, 
-  BarChart3,
-  Layers,
-  MessageSquare
-} from 'lucide-react';
+import { Calendar, FileText, CheckSquare, Users, Bell, Clock, BarChart3, Layers, MessageSquare } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import FeatureCard from '../components/FeatureCard';
 import AppShowcase from '../components/AppShowcase';
-
 const Index: React.FC = () => {
   // Refs for animation elements
   const heroRef = useRef<HTMLDivElement>(null);
-  
+
   // Intersection Observer for animations
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
     // Add all elements with fade-in class to the observer
     document.querySelectorAll('.fade-in').forEach(el => {
       observer.observe(el);
     });
-    
     return () => observer.disconnect();
   }, []);
-  
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navbar />
       
       {/* Hero Section */}
-      <section 
-        className="relative pt-32 pb-24 overflow-hidden" 
-        ref={heroRef}
-      >
-        <div 
-          className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background pointer-events-none"
-          aria-hidden="true"
-        />
+      <section className="relative pt-32 pb-24 overflow-hidden" ref={heroRef}>
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background pointer-events-none" aria-hidden="true" />
         
         {/* Animated background elements */}
         <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full filter blur-3xl animate-float opacity-30"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/10 rounded-full filter blur-3xl animate-float opacity-20" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/10 rounded-full filter blur-3xl animate-float opacity-20" style={{
+        animationDelay: '2s'
+      }}></div>
         
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -70,34 +51,20 @@ const Index: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-              <Link 
-                to="/register" 
-                className="px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-white font-medium transition-all transform hover:scale-105 shadow-lg"
-              >
+              <Link to="/register" className="px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-white font-medium transition-all transform hover:scale-105 shadow-lg">
                 Get Started
               </Link>
-              <a 
-                href="#features" 
-                className="px-8 py-3 rounded-full bg-white/5 hover:bg-white/10 text-white font-medium border border-white/10 transition-all"
-              >
+              <a href="#features" className="px-8 py-3 rounded-full bg-white/5 hover:bg-white/10 text-white font-medium border border-white/10 transition-all">
                 Learn More
               </a>
             </div>
             
             <div className="flex justify-center space-x-4">
               <a href="#" className="transition-transform hover:scale-105">
-                <img 
-                  src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" 
-                  alt="Download on the App Store"
-                  className="h-12"
-                />
+                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" className="h-12" />
               </a>
               <a href="#" className="transition-transform hover:scale-105">
-                <img 
-                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
-                  alt="Get it on Google Play"
-                  className="h-12 object-contain"
-                />
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-12 object-contain" />
               </a>
             </div>
           </div>
@@ -117,48 +84,12 @@ const Index: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in">
-            <FeatureCard 
-              icon={Calendar} 
-              title="Project Timeline" 
-              description="Schedule and track all your project milestones, deadlines, and events in one intuitive calendar view."
-              color="bg-app-blue"
-              delay={100}
-            />
-            <FeatureCard 
-              icon={CheckSquare} 
-              title="Task Management" 
-              description="Create, assign, and track tasks with detailed notes and progress tracking for each stage of your build."
-              color="bg-app-green"
-              delay={200}
-            />
-            <FeatureCard 
-              icon={FileText} 
-              title="Document Storage" 
-              description="Store and organize all project documents, permits, plans, and contracts in one secure location."
-              color="bg-app-orange"
-              delay={300}
-            />
-            <FeatureCard 
-              icon={Users} 
-              title="Team Collaboration" 
-              description="Invite clients, contractors, and team members to collaborate on projects with tailored access levels."
-              color="bg-purple-500"
-              delay={400}
-            />
-            <FeatureCard 
-              icon={Bell} 
-              title="Real-time Notifications" 
-              description="Stay informed with instant alerts about important updates, approaching deadlines, and completed tasks."
-              color="bg-pink-500"
-              delay={500}
-            />
-            <FeatureCard 
-              icon={BarChart3} 
-              title="Progress Tracking" 
-              description="Monitor project status with visual progress indicators and comprehensive reporting tools."
-              color="bg-yellow-500"
-              delay={600}
-            />
+            <FeatureCard icon={Calendar} title="Project Timeline" description="Schedule and track all your project milestones, deadlines, and events in one intuitive calendar view." color="bg-app-blue" delay={100} />
+            <FeatureCard icon={CheckSquare} title="Task Management" description="Create, assign, and track tasks with detailed notes and progress tracking for each stage of your build." color="bg-app-green" delay={200} />
+            <FeatureCard icon={FileText} title="Document Storage" description="Store and organize all project documents, permits, plans, and contracts in one secure location." color="bg-app-orange" delay={300} />
+            <FeatureCard icon={Users} title="Team Collaboration" description="Invite clients, contractors, and team members to collaborate on projects with tailored access levels." color="bg-purple-500" delay={400} />
+            <FeatureCard icon={Bell} title="Real-time Notifications" description="Stay informed with instant alerts about important updates, approaching deadlines, and completed tasks." color="bg-pink-500" delay={500} />
+            <FeatureCard icon={BarChart3} title="Progress Tracking" description="Monitor project status with visual progress indicators and comprehensive reporting tools." color="bg-yellow-500" delay={600} />
           </div>
         </div>
       </section>
@@ -168,10 +99,7 @@ const Index: React.FC = () => {
       
       {/* Benefits Section */}
       <section id="benefits" className="py-24 relative overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-gradient-to-t from-background/0 via-primary/5 to-background/0 pointer-events-none"
-          aria-hidden="true"
-        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/0 via-primary/5 to-background/0 pointer-events-none" aria-hidden="true" />
         
         <div className="container px-4 mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16 fade-in">
@@ -213,10 +141,7 @@ const Index: React.FC = () => {
           </div>
           
           <div className="mt-16 text-center fade-in">
-            <Link 
-              to="/register" 
-              className="px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-white font-medium transition-all transform hover:scale-105 shadow-lg inline-block"
-            >
+            <Link to="/register" className="px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-white font-medium transition-all transform hover:scale-105 shadow-lg inline-block">
               Start Your Free Trial
             </Link>
             <p className="mt-4 text-white/60 text-sm">No credit card required. 14-day free trial.</p>
@@ -226,10 +151,7 @@ const Index: React.FC = () => {
       
       {/* Testimonial Section */}
       <section className="py-24 relative overflow-hidden">
-        <div 
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-6xl bg-gradient-to-b from-primary/10 via-primary/5 to-transparent rounded-3xl blur-3xl opacity-30 pointer-events-none"
-          aria-hidden="true"
-        />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-6xl bg-gradient-to-b from-primary/10 via-primary/5 to-transparent rounded-3xl blur-3xl opacity-30 pointer-events-none" aria-hidden="true" />
         
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto glass-card p-8 md:p-12 rounded-2xl shadow-2xl border border-white/10 fade-in">
@@ -263,34 +185,20 @@ const Index: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-              <Link 
-                to="/register" 
-                className="px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-white font-medium transition-all transform hover:scale-105 shadow-lg"
-              >
+              <Link to="/register" className="px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-white font-medium transition-all transform hover:scale-105 shadow-lg">
                 Create Account
               </Link>
-              <Link 
-                to="/login" 
-                className="px-8 py-3 rounded-full bg-white/5 hover:bg-white/10 text-white font-medium border border-white/10 transition-all"
-              >
+              <Link to="/login" className="px-8 py-3 rounded-full bg-white/5 hover:bg-white/10 text-white font-medium border border-white/10 transition-all">
                 Sign In
               </Link>
             </div>
             
             <div className="flex justify-center space-x-4 mt-6">
               <a href="#" className="transition-transform hover:scale-105">
-                <img 
-                  src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" 
-                  alt="Download on the App Store"
-                  className="h-12"
-                />
+                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" className="h-12" />
               </a>
               <a href="#" className="transition-transform hover:scale-105">
-                <img 
-                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
-                  alt="Get it on Google Play"
-                  className="h-12 object-contain"
-                />
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-12 object-cover" />
               </a>
             </div>
           </div>
@@ -298,8 +206,6 @@ const Index: React.FC = () => {
       </section>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
