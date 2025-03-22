@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, FileText, CheckSquare, Users, Bell, Clock, BarChart3, Layers, MessageSquare } from 'lucide-react';
+import { Calendar, FileText, CheckSquare, Users, Bell, Clock, BarChart3, Layers, MessageSquare, Globe } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import FeatureCard from '../components/FeatureCard';
 import AppShowcase from '../components/AppShowcase';
+
 const Index: React.FC = () => {
   // Refs for animation elements
   const heroRef = useRef<HTMLDivElement>(null);
@@ -173,6 +174,46 @@ const Index: React.FC = () => {
         </div>
       </section>
       
+      {/* Language Support Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-4xl mx-auto text-center mb-12 fade-in">
+            <Globe size={48} className="text-primary mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+              Available in Multiple Languages
+            </h2>
+            <p className="text-white/70 text-lg">
+              ONEBUILD is designed for an international workforce, with full support for English and Spanish.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto fade-in">
+            <div className="p-8 rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm hover:bg-black/30 transition-all text-center">
+              <div className="text-3xl font-bold mb-4">🇺🇸 English</div>
+              <p className="text-white/70">
+                Every feature, document, and interface element is available in English, making the app 
+                accessible to English-speaking teams worldwide.
+              </p>
+            </div>
+            
+            <div className="p-8 rounded-xl border border-white/10 bg-black/20 backdrop-blur-sm hover:bg-black/30 transition-all text-center">
+              <div className="text-3xl font-bold mb-4">🇪🇸 Español</div>
+              <p className="text-white/70">
+                Acceda a todas las funciones en español, permitiendo que los equipos de habla hispana 
+                aprovechen al máximo la aplicación sin barreras lingüísticas.
+              </p>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12 fade-in">
+            <p className="text-white/70">
+              Our commitment to language accessibility ensures that construction teams can collaborate 
+              effectively regardless of their primary language. Additional language support coming soon.
+            </p>
+          </div>
+        </div>
+      </section>
+      
       {/* Final CTA Section */}
       <section className="py-24 relative bg-gradient-to-b from-background to-black">
         <div className="container px-4 mx-auto">
@@ -208,4 +249,5 @@ const Index: React.FC = () => {
       <Footer />
     </div>;
 };
+
 export default Index;
