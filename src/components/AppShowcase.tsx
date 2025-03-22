@@ -5,27 +5,27 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const appScreenshots = [
   {
     id: 1,
-    src: '/lovable-uploads/d3dc75f3-de34-4a84-863f-813fbd7c6bd7.png',
+    src: '/public/app-project.png',
     alt: 'Project details screen'
   },
   {
     id: 2,
-    src: '/lovable-uploads/7a1eae1c-d3b3-46b2-9330-7e745ea445d3.png',
+    src: '/public/app-feed.png',
     alt: 'Projects screen with construction photos'
   },
   {
     id: 3,
-    src: '/lovable-uploads/67c12c4b-bb00-4a00-8332-13cd3c2eb872.png',
+    src: '/public/app-calendar.png',
     alt: 'Calendar with project timeline'
   },
   {
     id: 4,
-    src: '/lovable-uploads/90379e8d-53de-44a1-b6d5-a89464d27503.png',
+    src: '/public/app-files.png',
     alt: 'Files management screen'
   },
   {
     id: 5,
-    src: '/lovable-uploads/2080c17b-b780-4372-8728-fbaa96e694fc.png',
+    src: '/public/app-tasks.png',
     alt: 'Task management screen'
   }
 ];
