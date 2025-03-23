@@ -7,10 +7,8 @@ import FeatureCard from '../components/FeatureCard';
 import AppShowcase from '../components/AppShowcase';
 
 const Index: React.FC = () => {
-  // Refs for animation elements
   const heroRef = useRef<HTMLDivElement>(null);
 
-  // Intersection Observer for animations
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -23,21 +21,18 @@ const Index: React.FC = () => {
       threshold: 0.1
     });
 
-    // Add all elements with fade-in class to the observer
     document.querySelectorAll('.fade-in').forEach(el => {
       observer.observe(el);
     });
     return () => observer.disconnect();
   }, []);
-  
+
   return <div className="min-h-screen bg-background">
       <Navbar />
       
-      {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden" ref={heroRef}>
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background pointer-events-none" aria-hidden="true" />
         
-        {/* Animated background elements */}
         <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full filter blur-3xl animate-float opacity-30"></div>
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/10 rounded-full filter blur-3xl animate-float opacity-20" style={{
         animationDelay: '2s'
@@ -45,7 +40,7 @@ const Index: React.FC = () => {
         
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient leading-normal">
               Construction Management <span className="text-primary">Simplified</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-2xl mx-auto">
@@ -78,7 +73,6 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* Features Section */}
       <section id="features" className="py-20 relative overflow-hidden">
         <div className="container px-4 mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16 fade-in">
@@ -101,10 +95,8 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* App Showcase Section */}
       <AppShowcase />
       
-      {/* Benefits Section */}
       <section id="benefits" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-background/0 via-primary/5 to-background/0 pointer-events-none" aria-hidden="true" />
         
@@ -161,7 +153,6 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* Testimonial Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-6xl bg-gradient-to-b from-primary/10 via-primary/5 to-transparent rounded-3xl blur-3xl opacity-30 pointer-events-none" aria-hidden="true" />
         
@@ -185,7 +176,6 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* Language Support Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="container px-4 mx-auto">
           <div className="max-w-4xl mx-auto text-center mb-12 fade-in">
@@ -225,7 +215,6 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* Final CTA Section */}
       <section className="py-24 relative bg-gradient-to-b from-background to-black">
         <div className="container px-4 mx-auto">
           <div className="text-center max-w-3xl mx-auto fade-in">
