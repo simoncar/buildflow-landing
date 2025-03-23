@@ -41,7 +41,7 @@ const Index: React.FC = () => {
         
         <div className="container px-4 mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gradient leading-tight md:leading-[0.6]">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gradient leading-loose py-2">
               Construction Management <span className="text-primary">Simplified</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-2xl mx-auto">
