@@ -4,27 +4,27 @@ import React, { useState } from "react";
 const appScreenshots = [
 	{
 		id: 1,
-		src: "/public/app-project.png",
+		src: "/app-project.png",
 		alt: "Project screen"
 	},
 	{
 		id: 2,
-		src: "/public/app-feed.png",
+		src: "/app-feed.png",
 		alt: "Projects screen with construction photos"
 	},
 	{
 		id: 3,
-		src: "/public/app-calendar.png",
+		src: "/app-calendar.png",
 		alt: "Calendar with project timeline"
 	},
 	{
 		id: 4,
-		src: "/public/app-files.png",
+		src: "/app-files.png",
 		alt: "Files management screen"
 	},
 	{
 		id: 5,
-		src: "/public/app-tasks.png",
+		src: "/app-tasks.png",
 		alt: "Task management screen"
 	}
 ];
