@@ -1,47 +1,35 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useState } from "react";
-
-const appScreenshots = [
-	{
-		id: 1,
-		src: "/app-project.png",
-		alt: "Project screen"
-	},
-	{
-		id: 2,
-		src: "/app-feed.png",
-		alt: "Projects screen with construction photos"
-	},
-	{
-		id: 3,
-		src: "/app-calendar.png",
-		alt: "Calendar with project timeline"
-	},
-	{
-		id: 4,
-		src: "/app-files.png",
-		alt: "Files management screen"
-	},
-	{
-		id: 5,
-		src: "/app-tasks.png",
-		alt: "Task management screen"
-	}
-];
-
+const appScreenshots = [{
+  id: 1,
+  src: "/public/app-project.png",
+  alt: "Project screen"
+}, {
+  id: 2,
+  src: "/public/app-feed.png",
+  alt: "Projects screen with construction photos"
+}, {
+  id: 3,
+  src: "/public/app-calendar.png",
+  alt: "Calendar with project timeline"
+}, {
+  id: 4,
+  src: "/public/app-files.png",
+  alt: "Files management screen"
+}, {
+  id: 5,
+  src: "/public/app-tasks.png",
+  alt: "Task management screen"
+}];
 const AppShowcase: React.FC = () => {
-	const [activeIndex, setActiveIndex] = useState(0);
-
-	const nextSlide = () => {
-		setActiveIndex((current) => (current === appScreenshots.length - 1 ? 0 : current + 1));
-	};
-
-	const prevSlide = () => {
-		setActiveIndex((current) => (current === 0 ? appScreenshots.length - 1 : current - 1));
-	};
-
-	return (
-		<section id="app" className="py-24 overflow-hidden relative">
+  const [activeIndex, setActiveIndex] = useState(0);
+  const nextSlide = () => {
+    setActiveIndex(current => current === appScreenshots.length - 1 ? 0 : current + 1);
+  };
+  const prevSlide = () => {
+    setActiveIndex(current => current === 0 ? appScreenshots.length - 1 : current - 1);
+  };
+  return <section id="app" className="py-24 overflow-hidden relative">
 			<div className="absolute inset-0 bg-gradient-to-b from-background/0 via-primary/5 to-background/0 pointer-events-none" aria-hidden="true" />
 
 			<div className="container px-4 mx-auto">
@@ -66,15 +54,9 @@ const AppShowcase: React.FC = () => {
 
 						{/* App Screenshots Carousel */}
 						<div className="w-full h-[600px] overflow-hidden rounded-[32px] shadow-2xl app-shadow">
-							{appScreenshots.map((screenshot, index) => (
-								<div
-									key={screenshot.id}
-									className={`absolute inset-0 transition-all duration-500 ease-in-out ${
-										index === activeIndex ? "opacity-100 translate-x-0" : index < activeIndex ? "opacity-0 -translate-x-full" : "opacity-0 translate-x-full"
-									}`}>
-									<img src={screenshot.src} alt={screenshot.alt} className="w-full h-full object-cover" />
-								</div>
-							))}
+							{appScreenshots.map((screenshot, index) => <div key={screenshot.id} className={`absolute inset-0 transition-all duration-500 ease-in-out ${index === activeIndex ? "opacity-100 translate-x-0" : index < activeIndex ? "opacity-0 -translate-x-full" : "opacity-0 translate-x-full"}`}>
+									<img src={screenshot.src} alt={screenshot.alt} className="w-full h-full object-contain" />
+								</div>)}
 						</div>
 					</div>
 
@@ -85,13 +67,7 @@ const AppShowcase: React.FC = () => {
 						</button>
 
 						<div className="flex space-x-2">
-							{appScreenshots.map((_, index) => (
-								<button
-									key={index}
-									onClick={() => setActiveIndex(index)}
-									className={`w-2 h-2 rounded-full transition-all ${index === activeIndex ? "bg-primary w-6" : "bg-white/30 hover:bg-white/50"}`}
-									aria-label={`Go to screenshot ${index + 1}`}></button>
-							))}
+							{appScreenshots.map((_, index) => <button key={index} onClick={() => setActiveIndex(index)} className={`w-2 h-2 rounded-full transition-all ${index === activeIndex ? "bg-primary w-6" : "bg-white/30 hover:bg-white/50"}`} aria-label={`Go to screenshot ${index + 1}`}></button>)}
 						</div>
 
 						<button onClick={nextSlide} className="p-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors" aria-label="Next screenshot">
@@ -100,8 +76,6 @@ const AppShowcase: React.FC = () => {
 					</div>
 				</div>
 			</div>
-		</section>
-	);
+		</section>;
 };
-
 export default AppShowcase;
