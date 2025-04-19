@@ -64,10 +64,10 @@ const Index: React.FC = () => {
 						</div>
 
 						<div className="flex justify-center space-x-4">
-							<a href="#" className="transition-transform hover:scale-105">
+							<a href="https://apps.apple.com/app/id6449942716" className="transition-transform hover:scale-105" target="_blank" rel="noopener noreferrer">
 								<img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" className="h-12 object-scale-down" />
 							</a>
-							<a href="#" className="transition-transform hover:scale-105">
+							<a href="https://play.google.com/store/apps/details?id=co.simon.bottletree&pli=1" className="transition-transform hover:scale-105" target="_blank" rel="noopener noreferrer">
 								<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-12 object-contain" />
 							</a>
 						</div>
@@ -252,10 +252,10 @@ const Index: React.FC = () => {
 						</div>
 
 						<div className="flex justify-center space-x-4 mt-6">
-							<a href="#" className="transition-transform hover:scale-105">
+							<a href="https://apps.apple.com/app/id6449942716" className="transition-transform hover:scale-105" target="_blank" rel="noopener noreferrer">
 								<img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" className="h-12 object-scale-down" />
 							</a>
-							<a href="#" className="transition-transform hover:scale-105">
+							<a href="https://play.google.com/store/apps/details?id=co.simon.bottletree&pli=1" className="transition-transform hover:scale-105" target="_blank" rel="noopener noreferrer">
 								<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-12 object-contain" />
 							</a>
 						</div>

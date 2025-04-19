@@ -25,13 +25,13 @@ const Navbar: React.FC = () => {
 				</div>
 
 				<nav className="hidden md:flex items-center space-x-8">
-					<a href="#features" className="text-sm font-medium text-white/80 hover:text-white transition-colors">
+					<a href="/#features" className="text-sm font-medium text-white/80 hover:text-white transition-colors">
 						Features
 					</a>
-					<a href="#app" className="text-sm font-medium text-white/80 hover:text-white transition-colors">
+					<a href="/#app" className="text-sm font-medium text-white/80 hover:text-white transition-colors">
 						The App
 					</a>
-					<a href="#benefits" className="text-sm font-medium text-white/80 hover:text-white transition-colors">
+					<a href="/#benefits" className="text-sm font-medium text-white/80 hover:text-white transition-colors">
 						Benefits
 					</a>
 					<div className="flex items-center space-x-3">
@@ -53,13 +53,13 @@ const Navbar: React.FC = () => {
 			{isMobileMenuOpen && (
 				<div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-t border-white/10 animate-fade-in">
 					<div className="container px-4 mx-auto py-4 flex flex-col space-y-4">
-						<a href="#features" className="text-sm font-medium text-white/80 hover:text-white py-2 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+						<a href="/#features" className="text-sm font-medium text-white/80 hover:text-white py-2 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
 							Features
 						</a>
-						<a href="#app" className="text-sm font-medium text-white/80 hover:text-white py-2 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+						<a href="/#app" className="text-sm font-medium text-white/80 hover:text-white py-2 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
 							The App
 						</a>
-						<a href="#benefits" className="text-sm font-medium text-white/80 hover:text-white py-2 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+						<a href="/#benefits" className="text-sm font-medium text-white/80 hover:text-white py-2 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
 							Benefits
 						</a>
 						<div className="flex flex-col space-y-3 pt-2">
