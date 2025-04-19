@@ -9,7 +9,7 @@ const Privacy: React.FC = () => {
 			<div className="pt-24 pb-16">
 				<div className="container px-4 mx-auto">
 					<div className="prose prose-invert prose-lg max-w-none opacity-90">
-						<h1>Privacy Policy</h1>
+						<h1 className="text-4xl font-bold text-center mb-6">Privacy Policy</h1>
 						<p>
 							We respect your privacy and are committed to protecting it through our compliance with this privacy policy (“Policy”). This Policy describes the types of information we may collect from
 							you or that you may provide (“Personal Information”) in the “OTB Apps” mobile application (“Mobile Application” or “Service”) and any of its related products and services (collectively,
@@ -192,8 +192,8 @@ const Privacy: React.FC = () => {
 							We will attempt to resolve complaints and disputes and make every reasonable effort to honor your wish to exercise your rights as quickly as possible and in any event, within the
 							timescales provided by applicable data protection laws.
 						</p>
-						<p>This document was last updated on February 17, 2024</p>
-						<p>Copyright 2024 – OTB Apps</p>
+						<p>This document was last updated on April 19, 2025</p>
+						<p>Copyright 2025 – OTB Apps</p>
 					</div>
 				</div>
 			</div>

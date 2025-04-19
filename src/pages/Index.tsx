@@ -236,15 +236,15 @@ const Index: React.FC = () => {
 
 						<div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
 							<a
-								href="https://b.otbapps.com/"
+								href="https://b.otbapps.com/signUp"
 								className="px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-white font-medium transition-all transform hover:scale-105 shadow-lg"
 								target="_blank"
 								rel="noopener noreferrer">
 								Create Account
 							</a>
 							<a
-								href="https://b.otbapps.com/"
-								className="px-8 py-3 rounded-full bg-white/5 hover:bg-white/10 text-white font-medium border border-white/10 transition-all"
+								href="https://b.otbapps.com/signIn"
+								className="px-8 py-3 rounded-full bg-transparent hover:bg-white/5 text-white font-medium transition-all transform hover:scale-105 shadow-lg"
 								target="_blank"
 								rel="noopener noreferrer">
 								Sign In
