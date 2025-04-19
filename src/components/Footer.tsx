@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
 				</div>
 
 				<div className="mt-12 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center">
-					<p className="text-sm text-white/40">© {new Date().getFullYear()} ONEBUILD. All rights reserved.</p>
+					<p className="text-sm text-white/40">© {new Date().getFullYear()} ONEBUILD by OTBApps Pty Ltd. All rights reserved.</p>
 					<div className="mt-4 md:mt-0 flex space-x-6"></div>
 				</div>
 			</div>
